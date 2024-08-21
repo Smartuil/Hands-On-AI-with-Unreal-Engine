@@ -1,10 +1,5 @@
 ---
-cover: .gitbook/assets/企业微信截图_17232795251141 (1).png
-coverY: 0
 layout:
-  cover:
-    visible: true
-    size: full
   title:
     visible: true
   description:
@@ -19,3 +14,6 @@ layout:
 
 # 😀 虚幻引擎AI实战
 
+{% hint style="info" %}
+感谢腾讯元宝的倾情赞助😘
+{% endhint %}
