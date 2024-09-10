@@ -44,21 +44,21 @@
 
 视频游戏中人工智能的最初形式是基础性的，用于像Pong（雅达利，1972年）、Space Invaders（Midway Games West, Inc.，1978年）等游戏中。实际上，除了移动球拍试图接住球或移动外星人向玩家靠近外，我们无法做更多的事情：
 
-<figure><img src="../../../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>1978年Midway Games West, Inc.的《太空侵略者》截图，其中使用了基础形式的AI来控制外星人</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption><p>1978年Midway Games West, Inc.的《太空侵略者》截图，其中使用了基础形式的AI来控制外星人</p></figcaption></figure>
 
 第一个使用显著AI的著名游戏是《吃豆人》\[Midway Games West, Inc.,1979]。四个怪物（后来由于Atari 2600的闪烁端口被称为鬼）使用有限状态机（FSM）来追逐（或逃离）玩家：
 
-<figure><img src="../../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 在20世纪80年代，游戏中的AI并没有太大变化。直到《魔兽争霸：人类与兽人》\[暴雪娱乐，1994]的推出，视频游戏中才成功实现了路径查找系统。我们将在第三章“导航”中探讨《虚幻》中的导航系统：
 
-<figure><img src="../../../.gitbook/assets/image (3) (1).png" alt=""><figcaption><p>这是《魔兽争霸：人类与兽人》[暴雪娱乐，1994]的截图，其中的单位（此截图中的兽人平民和士兵）使用路径查找算法在地图中移动。</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (3) (1) (1).png" alt=""><figcaption><p>这是《魔兽争霸：人类与兽人》[暴雪娱乐，1994]的截图，其中的单位（此截图中的兽人平民和士兵）使用路径查找算法在地图中移动。</p></figcaption></figure>
 
 这段文字可能的意思是：
 
 可能是开始让人们关注人工智能的游戏是《**Goldeneye 007**》\[Rare Ltd., 1997]，这款游戏展示了人工智能如何提升游戏体验。尽管它仍然依赖于有限状态机（FSMs），但其创新之处在于角色可以相互看到并做出相应的反应。我们将在第5章“代理意识”中探讨代理意识。这在当时是一个热门话题，一些游戏将其作为主要的游戏机制，例如《**Thief: The Dark Project**》\[Looking Glass Studios, Inc., 1998]：
 
-<figure><img src="../../../.gitbook/assets/image (4) (1).png" alt=""><figcaption><p>来自《Goldeneye 007》[Rare Ltd., 1997]的截图，这款游戏改变了人们对电子游戏人工智能的认知</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (4) (1) (1).png" alt=""><figcaption><p>来自《Goldeneye 007》[Rare Ltd., 1997]的截图，这款游戏改变了人们对电子游戏人工智能的认知</p></figcaption></figure>
 
 以及《**Metal Gear Solid**》\[Konami Corporation, 1998]：
 
