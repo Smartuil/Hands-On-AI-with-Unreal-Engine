@@ -8,15 +8,15 @@
 
 你可以在模式面板的体积选项卡下找到这个设置，然后进入导航网格边界体积：
 
-<figure><img src="../../../.gitbook/assets/image (38).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (38) (1).png" alt=""><figcaption></figcaption></figure>
 
 一旦这个体被放置在地图中，默认值是移除该体内部的**导航网格**部分，如下面的截图所示：
 
-<figure><img src="../../../.gitbook/assets/image (39).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (39) (1).png" alt=""><figcaption></figcaption></figure>
 
 这在您有AI不想进入的区域或修复导航网格的伪影时非常有用。尽管**导航修改器体**指定了地图的一部分，但行为是在**导航网格区域**中指定的。这意味着，如果我们查看**导航网格修改器体**的设置，我们只能找到与导航相关的一个设置，名为**区域类**：
 
-<figure><img src="../../../.gitbook/assets/image (40).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (40) (1).png" alt=""><figcaption></figcaption></figure>
 
 因此，这个体只能指定地图中应用特定**区域类**的一部分。默认情况下，区域类是**NavArea\_Null**，它在地图与该体重叠的部分“移除”导航网格。我们将在下一节中探讨**导航网格区域**的工作原理。
 
@@ -32,7 +32,7 @@
 
 在 Unreal 中，成本是在类内指定的。如果你点击一个 **Nav Modifier Volume**，你会注意到你需要指定一个 **Area Class**，如下面的截图所示：
 
-<figure><img src="../../../.gitbook/assets/image (41).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (41) (1).png" alt=""><figcaption></figcaption></figure>
 
 正如你可能猜到的，默认值是 **NavArea\_Null**，它对进入的成本是无限的，导致 AI 从不进入该区域。导航系统足够智能，甚至不会去生成那个区域，并将其视为不可导航的区域。
 
@@ -43,7 +43,7 @@
 * NavArea\_Null：这使得该区域对所有代理都不可导航。
 * NavArea\_Obstacle：这为该区域分配了更高的成本，因此代理会试图避开它：
 
-<figure><img src="../../../.gitbook/assets/image (43).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (43) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 你会注意到，如果你创建一个新的蓝图，或者甚至在 Visual Studio 中打开源代码，都会有 NavArea\_Meta 和它的子类 NavArea\_MetaSwitchingActor。然而，如果你看它们的代码，它们主要包含一些已经废弃的代码。因此，我们在这本书中不会使用它们。
@@ -55,11 +55,11 @@
 
 在蓝图中创建一个新的**NavArea**类非常简单；你只需要创建一个新的蓝图，该蓝图继承自**NavArea**类，如下面的截图所示：
 
-<figure><img src="../../../.gitbook/assets/image (44).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (44) (1).png" alt=""><figcaption></figcaption></figure>
 
 根据约定，类名应以“_NavArea\__”开头。我们将其重命名为**NavArea\_BPJungle**（我添加了BP以示我们是用蓝图创建的，因为我们在蓝图和C++中重复了相同的任务）。这在内容浏览器中应该是这样的：
 
-<figure><img src="../../../.gitbook/assets/image (45).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (45) (1).png" alt=""><figcaption></figcaption></figure>
 
 然后，如果你打开蓝图，你将能够为区域分配自定义成本。你也可以为你的区域指定特定的颜色，以便在构建导航网格时容易识别。这是默认情况下详情面板的样子：
 

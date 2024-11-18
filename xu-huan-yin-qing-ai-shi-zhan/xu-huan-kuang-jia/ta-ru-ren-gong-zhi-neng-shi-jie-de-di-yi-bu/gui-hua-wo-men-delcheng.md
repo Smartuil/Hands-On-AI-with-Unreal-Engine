@@ -27,7 +27,7 @@
 
 由于在本书中，我们将探讨AI代理如何感知、移动、计划和与其周围环境互动的各个部分，因此绘制一个代理模式的图表将会有所帮助。当然，可能会有许多其他模式，它们都是同样有效的，但我相信这个模式对于开始学习AI游戏开发尤其有用。
 
-<figure><img src="../../../.gitbook/assets/image (12) (1).png" alt=""><figcaption><p>我们在本书中将要使用的代理模型</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (12) (1) (1).png" alt=""><figcaption><p>我们在本书中将要使用的代理模型</p></figcaption></figure>
 
 由于我们选择了自底向上的方法，我们应该从底部阅读模式。我们将更正式地将其称为代理模型。
 
@@ -47,7 +47,7 @@
 
 以下图表展示了它们如何相互交互：
 
-<figure><img src="../../../.gitbook/assets/image (14) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (14) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 控制器（Controller）与玩家控制器（Player Controller）之间存在虚线连接，表示拥有关系。AI控制器（AI Controller）与AI系统（AI Systems）之间通过箭头连接，表示交互和运行关系。AI控制器与木偶（Pawn）之间也存在拥有关系。木偶可以由两种类型的控制器拥有：对于玩家来说，这可能是主要角色；而对于AI控制器来说，木偶可以被视为虚拟角色，AI控制器的敌人，试图击败玩家。
 
