@@ -4,7 +4,7 @@
 
 您可以通过Sense的Detecting for Affiliation设置来更改AI可以感知的实体类型。
 
-<figure><img src="../../../.gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (5) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 这提供了三个复选框，我们可以选择希望AI感知的内容。&#x20;
 

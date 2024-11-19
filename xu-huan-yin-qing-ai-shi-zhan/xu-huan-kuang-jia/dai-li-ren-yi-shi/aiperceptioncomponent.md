@@ -6,15 +6,15 @@
 
 如果我们打开我们的蓝图AI控制器，我们可以像添加其他组件一样添加AIPerceptionComponent：从组件选项卡中，点击添加组件并选择AIPerceptionComponent，如下图所示：
 
-<figure><img src="../../../.gitbook/assets/image (7) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (7) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 选择组件后，您将看到它在详情面板中的显示方式，如下图所示：
 
-<figure><img src="../../../.gitbook/assets/image (8) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (8) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 它只有两个参数。一个定义了主导感官。实际上， AIPerceptionComponent可以拥有多种感官，当需要检索被感知目标的位置时，AI应该使用哪一个呢？主导感官通过给予一种感官优先权来消除歧义。另一个参数是感官数组。当你用不同的感官填充数组时，你将能够自定义每一个感官，如下图所示：
 
-<figure><img src="../../../.gitbook/assets/image (9) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (9) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 请记住，你可以拥有多种类型的感官。 假设你的敌人有两个头，面向不同的方向：你可能想要有两个视觉感官，每个头一个。当然，在这种情况下，需要更多的设置才能使它们正确工作，因为你需要修改视觉组件的工作方式，比如说，AI总是从其前向量观察。
@@ -26,7 +26,7 @@
 
 视觉感知的工作原理如你所期望的那样，而且它几乎是现成的（对于其他感官来说可能并非如此，但视觉和听觉是最常见的）。下面是它的外观：&#x20;
 
-<figure><img src="../../../.gitbook/assets/image (10) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (10) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 让我们分解一下控制视觉感知的主要参数：&#x20;
 
@@ -35,7 +35,7 @@
 * 周边视觉半角度数：顾名思义，它指定了AI能看多远（以度数表示）。90度的值意味着（因为这个值只是角度的一半），AI能够看到前方180度范围内的所有东西。180度的值意味着AI可以向任何方向看；它有360度的视野。此外，需要注意的是，这个半角是从前向量测量的。
 * 下图说明了这一点：
 
-<figure><img src="../../../.gitbook/assets/image (11) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (11) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 自动成功范围从最后出现：默认情况下，这被设置为一个无效值（-1.0f），意味着它不被使用。这指定了从目标最后出现位置的一个范围，如果目标在这个范围内，那么目标始终可见。
 
@@ -49,7 +49,7 @@
 
 听觉只有一个适当的参数，即听觉范围。这设置了AI能够听到的距离。其他的参数我们已经看过的视觉通用参数一样（例如：最大年龄、调试颜色和根据隶属关系探测）。它看起来是这样的：&#x20;
 
-<figure><img src="../../../.gitbook/assets/image (12) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (12) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 为了使这本书完整，值得一提的是还有另一个选项，称为LoSHearing。据我所知，通过查看虚幻源代码（版本4.20），这个参数似乎不影响任何东西（除了调试）。因此，我们将其保留为不启用。&#x20;

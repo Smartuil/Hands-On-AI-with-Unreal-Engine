@@ -10,19 +10,19 @@
 
 选择这个组件。在细节面板中，我们需要将其作为视觉感知添加进去，如下图所示：
 
-<figure><img src="../../../.gitbook/assets/image (13) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (13) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 我们可以将视野半径和失去视野半径设置为合理的值，例如分别为600和700，这样我们就有了这样的设置：
 
-<figure><img src="../../../.gitbook/assets/image (14) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (14) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 我们可以保持角度不变，但需要更改检测方式。实际上，无法从蓝图更改团队，因此玩家将处于相同的第 255 中立团队。由于我们刚开始研究系统的工作原理，我们可以勾选全部三个复选框。现在，我们应该得到这样的结果：
 
-<figure><img src="../../../.gitbook/assets/image (15) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (15) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 在组件的底部，我们应该有所有不同的事件。特别是，我们需要**On Target Perception Updated**，每当目标进入或退出感知区域时都会调用它——这正是我们所需要的：
 
-<figure><img src="../../../.gitbook/assets/image (16) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (16) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 点击"+"号在图表中添加事件：
 

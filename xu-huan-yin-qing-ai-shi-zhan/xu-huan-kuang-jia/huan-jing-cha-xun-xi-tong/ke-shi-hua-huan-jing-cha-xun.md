@@ -6,7 +6,7 @@
 
 首先，创建一个新的蓝图。要继承的类是EQSTestingPawn，如下图所示：
 
-<figure><img src="../../../.gitbook/assets/image (16) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (16) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 然后，你可以将其重命名为MyEQSTestingPawn。
 

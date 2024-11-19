@@ -232,11 +232,11 @@
 
 顾名思义，**路径网格生成器**就像网格生成器一样，在一个网格内生成点。然而，这个生成器的不同之处在于，它会检查这些点是否在指定距离内，通过生成设置中指定的上下文（通常是查询者）可以到达。 在环境查询编辑器中是这样的：
 
-<figure><img src="../../../.gitbook/assets/image (12) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (12) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 这个生成器的设置与点阵：网格生成器几乎完全相同：
 
-<figure><img src="../../../.gitbook/assets/image (13) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (13) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * **路径到物品**：如果勾选，这将排除所有从上下文中无法到达的点，在查询者的设置中。&#x20;
 * **导航过滤器**：顾名思义，它是用来执行寻路的导航过滤器。
@@ -247,7 +247,7 @@
 
 这就是它在环境中的样子（我稍微改变了关卡以阻挡楼上的路径。这使得楼梯后的那些无法到达的点甚至没有被这个生成器生成变得很明显）：
 
-<figure><img src="../../../.gitbook/assets/image (14) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (14) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 **内置测试**
 
@@ -257,7 +257,7 @@
 
 以下是可能的内置测试列表；让我们来探讨一下：&#x20;
 
-<figure><img src="../../../.gitbook/assets/image (15) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (15) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 距离：计算项目（生成的点）与特定上下文（例如查询者）之间的距离。它可以在3D、2D、沿z轴或沿z轴（绝对）计算。返回值是浮点数。&#x20;
 * 点积：计算线A和线B之间的点积。两条线都可以表示为两个上下文之间的线，或者表示为特定上下文的旋转（通过取旋转的前进方向）。计算可以在3D或2D中完成。&#x20;

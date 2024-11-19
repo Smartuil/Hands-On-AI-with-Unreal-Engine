@@ -12,11 +12,11 @@ EQS是一个早在Unreal 4.7中就引入的功能，并在4.9中有了很大的�
 
 从侧边菜单中，你将看到一个名为“**Experimental**”的部分（在“General”类别下），如下面的截图所示：
 
-<figure><img src="../../../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (2) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 如果你向下滚动设置，你会找到AI类别，在这个类别中你可以启用**环境查询系统（Environment Querying System）**：
 
-<figure><img src="../../../.gitbook/assets/image (3) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (3) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 检查此选项旁边的框，结果是整个项目中将激活环境查询系统。现在，您将能够为其创建资源（以及扩展它），并从行为树中调用它。
 

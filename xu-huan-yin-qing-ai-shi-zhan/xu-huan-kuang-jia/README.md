@@ -14,4 +14,4 @@ icon: '1'
 * 第四章，[环境查询系统](huan-jing-cha-xun-xi-tong/)
 * 第五章，[智能体感知](dai-li-ren-yi-shi/)
 * 第六章，[扩展行为树](kuo-zhan-xing-wei-shu/)
-* 第七章，集群
+* 第七章，[集群](ji-qun/)

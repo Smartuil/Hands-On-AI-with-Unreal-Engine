@@ -20,33 +20,33 @@
 由于在同一行为树中不能有多个黑板，你可以在**黑板详情面板**中使用父子继承，如右侧截图所示：
 {% endhint %}
 
-<figure><img src="../../../.gitbook/assets/image (8) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (8) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 **创建行为树**
 
 让我们通过转到**内容浏览器**并选择**添加新人工智能 > 行为树**来添加一个行为树，如下面的截图所示：
 
-<figure><img src="../../../.gitbook/assets/image (9) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (9) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 目前，我们将我们的行为树命名为`BT_MyFirstBehaviorTree`。同样，在这里，我使用了一个特定的命名规范，给所有行为树资产加上了`BT_`前缀。再次强调，请遵循这个命名规范，除非你有特别的理由不这么做。
 
 当你打开行为树窗口时，你会看到一个名为**Root**的节点，如下所示：
 
-<figure><img src="../../../.gitbook/assets/image (10) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (10) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 根节点是行为树执行开始的地方（从上到下，从左到右）。**根**节点本身只有一个引用，那就是黑板，所以它不能连接到其他任何东西。它是树的顶端，所有后续节点都在它下面。
 
 如果你从**根**节点拖动，你将能够添加复合节点：
 
-<figure><img src="../../../.gitbook/assets/image (11) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (11) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 为此，行为树编辑器非常直观。你可以继续从节点中拖动以添加**复合**节点或**任务**节点。要添加**装饰器**或**服务**，你可以右键单击节点并选择“**添加装饰器**...”或“**添加服务**...”，如下面的截图所示：
 
-<figure><img src="../../../.gitbook/assets/image (12) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (12) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 最后，如果你点击一个节点，可以在详细信息面板中选择其参数（以下截图显示了移动到节点的示例）：
 
-<figure><img src="../../../.gitbook/assets/image (13) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (13) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 **AI 控制器运行行为树**
 
@@ -58,17 +58,17 @@
 
 我们可以通过点击**添加新 | 蓝图类 | AI 控制器**来创建一个蓝图 AI 控制器。您将需要点击**所有类**并搜索 **AI 控制器**以访问它。您可以在以下屏幕截图中看到这方面的示例：
 
-<figure><img src="../../../.gitbook/assets/image (14) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (14) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 目前，我们将我们的**AI 控制器**命名为`BP_MyFirstAIController`。双击它以打开蓝图编辑器。
 
 首先，我们需要创建一个变量，以便我们可以存储我们的**行为树**。尽管保留行为树的引用并不是必须的，但这样做是一个很好的实践。要创建一个**变量**，我们需要在“我的蓝图”面板中按下“+”**变量**按钮，该按钮位于“**变量**”标签旁边，如下面的截图所示（请记住，您的光标需要放在“变量”标签上，按钮才会显示）：
 
-<figure><img src="../../../.gitbook/assets/image (15) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (15) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 然后，作为变量类型，您需要选择行为树并给它一个名字，例如 **BehaviorTreeReference**。这就是您的变量应该的样子：
 
-<figure><img src="../../../.gitbook/assets/image (16) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (16) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 然后，在细节面板中，我们将设置默认值（请记住，要设置默认值，需要编译蓝图）：
 

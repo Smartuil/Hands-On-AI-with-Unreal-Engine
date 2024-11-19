@@ -10,21 +10,21 @@
 
 要创建蓝图任务，我们有几个选项可用。最简单的方法是在行为树编辑器中，我们按下顶部栏中的“新任务”按钮，如下图所示：&#x20;
 
-<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (16).png" alt=""><figcaption></figcaption></figure>
 
 但是，您需要手动重命名文件并将其放置到您希望它所在的文件夹中。&#x20;
 
 创建任务的另一种方法是创建一个从BTTask\_BlueprintBase继承的新蓝图，如下图所示：
 
-<figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 按照惯例，任务前缀为 "BBTask\_"（代表行为树任务）。例如，我们可以将任务命名为 BTTask\_BPMyFirstTask：
 
-<figure><img src="../../../.gitbook/assets/image (2).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (2) (1).png" alt=""><figcaption></figcaption></figure>
 
 创建蓝图任务后，我们可以覆盖三种类型的函数：
 
-<figure><img src="../../../.gitbook/assets/image (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (3) (1).png" alt=""><figcaption></figcaption></figure>
 
 * Receive Execute：任务开始时调用此函数，您可以在此实现任务的所有初始化。
 * Receive Tick：每次任务 tick 时调用此函数，因此您可以使用它不断执行某些操作。然而，由于可能有许多代理执行许多行为树，建议尽量保持此 Tick 函数简短，或者为了性能原因根本不实现它，而是使用计时器或委托来处理任务。
@@ -34,7 +34,7 @@
 
 到目前为止，系统无法理解任务何时完成执行或完成中止后的清理工作。因此，您需要调用两个函数：
 
-<figure><img src="../../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
 
 * Finish Execute：这将表示任务已经完成执行。它有一个布尔参数，表示任务是成功（true值）还是失败（false值）。
 * Finish Abort：这将表示任务已经完成中止。它没有参数。
@@ -53,11 +53,11 @@
 
 首先，要创建新的C++任务，我们需要创建一个从BTTaskNode继承的C++类，如下图所示：
 
-<figure><img src="../../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure>
 
 就像蓝图任务一样，约定是使用"BTTask\_"（行为树任务）作为任务的前缀。因此，我们可以将任务命名为"BTTask\_MyFirstTask"：&#x20;
 
-<figure><img src="../../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (6) (1).png" alt=""><figcaption></figcaption></figure>
 
 创建任务后，需要重写一些功能与蓝图中非常相似的函数。然而，它们之间也有一些差异。&#x20;
 

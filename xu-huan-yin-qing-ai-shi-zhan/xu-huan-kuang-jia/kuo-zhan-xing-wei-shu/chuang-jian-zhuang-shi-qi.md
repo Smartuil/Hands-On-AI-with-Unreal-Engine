@@ -8,11 +8,11 @@
 
 要创建蓝图装饰器，就像我们为任务所做的那样，您可以在行为树编辑器的顶部栏中按“新建装饰器”按钮，如下图所示：
 
-<figure><img src="../../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (7) (1).png" alt=""><figcaption></figcaption></figure>
 
 或者，你可以生成一个继承自BTDecorator\_BlueprintBase的蓝图类，如下图所示：&#x20;
 
-<figure><img src="../../../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (11) (1).png" alt=""><figcaption></figcaption></figure>
 
 无论如何，命名规范是在装饰器前加上"BTDecorator\_"（代表行为树装饰器）。例如，我们可以将我们的类命名为BTDecorator\_BPMyFirstDecorator：
 

@@ -34,19 +34,19 @@
 
 在以下截图中，我们可以看到玩家更换房间时感知是如何变化的：
 
-<figure><img src="../../../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>《摩纳哥：你的是我的》游戏截图</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption><p>《摩纳哥：你的是我的》游戏截图</p></figcaption></figure>
 
 在以下截图中，我们有玩家感知的特写：
 
-<figure><img src="../../../.gitbook/assets/image (2) (1).png" alt=""><figcaption><p>《摩纳哥：你的是我的》游戏截图</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (2) (1) (1).png" alt=""><figcaption><p>《摩纳哥：你的是我的》游戏截图</p></figcaption></figure>
 
 然后，我们有一个卫兵手电筒的特写镜头：
 
-<figure><img src="../../../.gitbook/assets/image (3) (1).png" alt=""><figcaption><p>《摩纳哥：你的是我的》游戏截图</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (3) (1) (1).png" alt=""><figcaption><p>《摩纳哥：你的是我的》游戏截图</p></figcaption></figure>
 
 改变游戏，在《合金装备固体》中，感知被用在与敌人（红点）在玩家（白点）周围环境中巡逻的类似方式。在以下截图中，你可以看到一个在小地图上表示为红点的摄像头，以及小地图中的黄色视野锥（守卫则有一个蓝色锥形视野）：
 
-<figure><img src="../../../.gitbook/assets/image (4) (1).png" alt=""><figcaption><p>游戏《合金装备固体》截图</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (4) (1) (1).png" alt=""><figcaption><p>游戏《合金装备固体》截图</p></figcaption></figure>
 
 《合金装备固体》游戏系列完全基于感知，如果你有兴趣开发具有此机制的游戏AI，那么探索更多并了解这款游戏是值得的。&#x20;
 
