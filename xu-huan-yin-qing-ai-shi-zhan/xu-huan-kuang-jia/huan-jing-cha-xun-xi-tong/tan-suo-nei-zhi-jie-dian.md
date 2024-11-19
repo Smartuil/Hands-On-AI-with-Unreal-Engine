@@ -28,7 +28,7 @@
 
 这是可用内置生成器的列表，你可以在环境查询编辑器中找到它们：
 
-<figure><img src="../../../.gitbook/assets/image (20) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (20) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 为了组织这些信息，我将每个生成器分成一个子节，并按前一张截图中的顺序（按字母顺序）进行排序。
 
@@ -42,17 +42,17 @@
 
 这是在环境查询编辑器中的样子：
 
-<figure><img src="../../../.gitbook/assets/image (21) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (21) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 可能的选项包括**搜索的演员类别**（显然）和从**搜索中心**开始的**搜索半径**（以上下文表示）。此外，我们可以获取特定类别的所有演员，而不考虑他们是否在搜索半径内：
 
-<figure><img src="../../../.gitbook/assets/image (22) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (22) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 在之前的截图中，我使用了**查询器**作为**搜索中心**，**搜索半径为50000**，并将**第三人称角色**作为**被搜索的演员类**，因为该项目中已经包含了它。
 
 通过使用这些设置（并放置了一些**第三人称角色演员**），我们得到了以下情况：
 
-<figure><img src="../../../.gitbook/assets/image (23) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (23) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 请注意三个**第三人称角色演员**周围的蓝色球体。
 
@@ -62,15 +62,15 @@
 
 这就是它在环境查询编辑器中的样子：
 
-<figure><img src="../../../.gitbook/assets/image (24) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (24) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 这个生成器唯一可用的设置是查询上下文：
 
-<figure><img src="../../../.gitbook/assets/image (25) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (25) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 因此，如果我们将**查询器**作为**查询上下文**，那么我们只有查询器自身的位置，如下面的截图所示：
 
-<figure><img src="../../../.gitbook/assets/image (26) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (26) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 **Composite**
 
@@ -78,11 +78,11 @@
 
 这就是它在环境查询编辑器中的样子：
 
-<figure><img src="../../../.gitbook/assets/image (27) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (27) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 在设置中，您可以设置一系列生成器：
 
-<figure><img src="../../../.gitbook/assets/image (28) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (28) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 由于我们没有时间详细地检查所有内容，所以我不会进一步讨论这个生成器。
 
@@ -92,7 +92,7 @@
 
 这就是它在环境查询编辑器中的样子：
 
-<figure><img src="../../../.gitbook/assets/image (29) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (29) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 这是一个非常复杂的生成器，因此它有各种设置。让我们来看看它们：
 
@@ -232,11 +232,11 @@
 
 顾名思义，**路径网格生成器**就像网格生成器一样，在一个网格内生成点。然而，这个生成器的不同之处在于，它会检查这些点是否在指定距离内，通过生成设置中指定的上下文（通常是查询者）可以到达。 在环境查询编辑器中是这样的：
 
-<figure><img src="../../../.gitbook/assets/image (12) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (12) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 这个生成器的设置与点阵：网格生成器几乎完全相同：
 
-<figure><img src="../../../.gitbook/assets/image (13) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (13) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * **路径到物品**：如果勾选，这将排除所有从上下文中无法到达的点，在查询者的设置中。&#x20;
 * **导航过滤器**：顾名思义，它是用来执行寻路的导航过滤器。
@@ -247,7 +247,7 @@
 
 这就是它在环境中的样子（我稍微改变了关卡以阻挡楼上的路径。这使得楼梯后的那些无法到达的点甚至没有被这个生成器生成变得很明显）：
 
-<figure><img src="../../../.gitbook/assets/image (14) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (14) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 **内置测试**
 
@@ -257,7 +257,7 @@
 
 以下是可能的内置测试列表；让我们来探讨一下：&#x20;
 
-<figure><img src="../../../.gitbook/assets/image (15) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (15) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * 距离：计算项目（生成的点）与特定上下文（例如查询者）之间的距离。它可以在3D、2D、沿z轴或沿z轴（绝对）计算。返回值是浮点数。&#x20;
 * 点积：计算线A和线B之间的点积。两条线都可以表示为两个上下文之间的线，或者表示为特定上下文的旋转（通过取旋转的前进方向）。计算可以在3D或2D中完成。&#x20;

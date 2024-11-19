@@ -8,13 +8,13 @@
 
 Unreal Engine是一款由Epic Games开发的游戏引擎，首次发布于1998年。如今，它是使用最广泛的（开源）游戏引擎之一，这要归功于其强大的功能。以下截图展示了Unreal Engine的主界面：
 
-<figure><img src="../../../.gitbook/assets/image (16) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (16) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 我们需要安装最新版本的Unreal Engine。您可以通过访问以下网址找到它：https://www.unrealengine.com/en-US/what-is-unreal-engine-4。除非您从源代码（https://docs.unrealengine.com/en-us/Programming/Development/BuildingUnrealEngine）获取Unreal Engine，否则您将需要安装Epic Launcher。如果您是蓝图用户，并且不打算使用C++，那么这些步骤就足够了。另一方面，如果您要使用C++，那么您还需要执行一些额外的步骤。
 
 在安装引擎时，您需要检查一些选项（如果您使用的是C++）。特别是，我们需要确保同时拥有“**引擎源**”和“**调试符号**”的选项，如下面的屏幕截图所示：
 
-<figure><img src="../../../.gitbook/assets/image (17) (1) (1) (1).png" alt=""><figcaption><p><strong>Unreal Engine 4.22.0 安装选项</strong></p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (17) (1) (1) (1) (1).png" alt=""><figcaption><p><strong>Unreal Engine 4.22.0 安装选项</strong></p></figcaption></figure>
 
 通过这样做，我们将能够浏览C++引擎源代码，并在发生崩溃时拥有一整套调用记录（以便您知道哪里出了问题）。
 

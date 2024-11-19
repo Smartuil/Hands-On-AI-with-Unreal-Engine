@@ -22,7 +22,7 @@
 
 那么，什么是树呢？它是一种描述不同节点之间关系的图。特别是，有一个“根”节点，它是唯一一个没有父母的节点。从这里开始，每个节点可以有一个或多个孩子，但只有一个父母。终端节点，即没有孩子的节点，被称为叶子。这里有一个简单的图，帮助你理解数学树的基本结构：
 
-<figure><img src="../../../.gitbook/assets/image (29) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (29) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 听起来可能很复杂，但实际上并非如此。当我们开始讨论行为树时，事情会变得越来越有趣。
 
@@ -101,15 +101,15 @@ Composite 节点是 Unreal 中行为树决策能力的核心，理解它们的�
 
 **选择器**：这种类型的节点会尝试找到一个其子节点来执行，这意味着它会试图找到一个分支（即作为子节点的另一个复合节点）或一个任务（即另一个子节点，但它是叶子节点）来执行。因此，**选择器**从最左边的子节点开始尝试执行。如果失败（要么任务未能执行，要么整个分支失败），则尝试第二个最左边的，依此类推。如果其中一个子节点返回成功，这意味着任务已经完成或整个分支已经完成，那么**选择器**会向其父节点报告成功，并停止执行其他子节点。另一方面，如果**选择器**的所有子节点都报告失败，那么选择器也会向其父节点报告失败。在下面的屏幕截图中，你可以看到**选择器**节点的外观：
 
-<figure><img src="../../../.gitbook/assets/image (4) (1) (1).png" alt="" width="291"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (4) (1) (1) (1).png" alt="" width="291"><figcaption></figcaption></figure>
 
 **序列**：这种类型的节点的工作方式有点像选择器的相反。要向父节点报告成功，**序列**的所有子节点都必须报告成功。这意味着**序列**将从最左边的子节点开始执行。如果成功，它将继续执行下一个最左边的，依此类推。如果所有子节点直到最右边的都成功，那么**序列**会向其父节点报告成功。否则，如果有一个子节点失败，那么**序列**将停止执行其子节点，并向父节点报告失败。在下面的屏幕截图中，你可以看到**序列**节点的外观：
 
-<figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1) (1).png" alt="" width="375"><figcaption></figcaption></figure>
 
 **简单并行**：这是一种特殊的复合节点，用于特定情况。实际上，它只能有两个子节点。最左边的子节点必须是一个任务，而最右边的子节点可以是任务或复合节点（从而生成一个子树）。**简单并行**开始并行执行其两个子节点，尽管最左边的被认为是主要的。如果主要的失败，它会报告失败，但如果主要的成功，那么它会报告成功。根据其设置，简单并行在完成执行主要任务后，可以选择等待子树的执行结束，或者直接报告成功或失败给其父节点并停止执行子树。在下面的屏幕截图中，你可以看到简单并行节点的外观。请注意，只能拖动两个子节点，其中最左边的必须是任务（紫色块是可拖动区域）：
 
-<figure><img src="../../../.gitbook/assets/image (2) (1) (1) (1).png" alt="" width="375"><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (2) (1) (1) (1) (1).png" alt="" width="375"><figcaption></figcaption></figure>
 
 通过这种方式，Composite 节点可以根据其子节点的报告（失败或成功）来决定执行哪些任务，并将结果（失败或成功）报告给其父节点。即使是根节点的唯一子节点（也是一个 Composite 节点）向根节点报告成功，那么这个树就已经成功执行了。一个好的行为树设计应该总是允许成功。&#x20;
 
@@ -127,7 +127,7 @@ Composite 节点是 Unreal 中行为树决策能力的核心，理解它们的�
 
 以下截图显示了一个装饰器如何附加到一个复合节点上。请注意，一个节点可以有多个装饰器：
 
-<figure><img src="../../../.gitbook/assets/image (3) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (3) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 对于那些熟悉其他行为树系统中的条件节点的人来说，重要的是不要将它们与 Unreal Engine 中的任务叶子节点混淆。更多信息可以在以下网址找到：https://docs.unrealengine.com/en-us/Engine/AI/BehaviorTrees/HowUE4BehaviorTreesDiffer。
@@ -137,7 +137,7 @@ Composite 节点是 Unreal 中行为树决策能力的核心，理解它们的�
 
 以下是Unreal内置任务的列表：
 
-<figure><img src="../../../.gitbook/assets/image (4) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (4) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * **黑板**：检查黑板上的特定键是否已设置（或未设置）。
 * **检查Actor上的游戏标签**：顾名思义，它检查Actor上是否存在特定的游戏标签，该标签由黑板值指定。
@@ -167,7 +167,7 @@ Composite 节点是 Unreal 中行为树决策能力的核心，理解它们的�
 
 服务节点附加到复合节点或任务节点，并将在其分支正在执行时执行。这意味着，只要节点下方有节点附加，无论有多少层级的父子节点正在执行，服务都会运行。以下截图将帮助您可视化这一点：
 
-<figure><img src="../../../.gitbook/assets/image (5) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (5) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 服务节点是行为树执行过程中的“眼睛”。实际上，它们会持续运行（如果子树处于活动状态），并可以实时执行检查和/或更新黑板（稍后会提到）的值。
 
@@ -177,7 +177,7 @@ Composite 节点是 Unreal 中行为树决策能力的核心，理解它们的�
 
 以下截图展示了一些服务的示例。请注意，服务可以与装饰器一起使用，一个复合节点可以有多个服务：
 
-<figure><img src="../../../.gitbook/assets/image (6) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (6) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 服务节点替代了其他行为树系统中的传统并行节点。
@@ -185,7 +185,7 @@ Composite 节点是 Unreal 中行为树决策能力的核心，理解它们的�
 
 唯一可用的两个默认服务（由于您需要为自己的游戏编程自己的服务，我们将在第6章“扩展行为树”中进行）如下面的截图所示：
 
-<figure><img src="../../../.gitbook/assets/image (7) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (7) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 * **设置默认焦点**：当此节点变为活动状态时，它会自动设置AI控制器的默认焦点。
 * **运行EQS（定期查询）**：顾名思义，它定期运行环境查询（更多信息请参阅第4章“环境查询系统”），以检查特定位置或演员。这就是我们在为敌人寻找掩护的示例中所需的服务类型。

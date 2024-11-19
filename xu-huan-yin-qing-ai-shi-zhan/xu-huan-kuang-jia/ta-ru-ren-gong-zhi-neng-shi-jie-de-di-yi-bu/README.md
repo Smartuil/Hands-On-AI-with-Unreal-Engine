@@ -8,7 +8,7 @@ icon: square-1
 
 欢迎读者，这是我们人工智能之旅的开始。你是否曾经好奇过《魔兽世界》中的那些勤劳的农民如何探索复杂的地图？或者，《吃豆人》中那些活泼的鬼魂如何让你无处可藏？又或者，《最终幻想》中的对手如何优化他们的攻击来屠杀你的团队？
 
-<figure><img src="../../../.gitbook/assets/image (15) (1) (1) (1).png" alt=""><figcaption><p>来自《最终幻想XV》[Square Enix, 2016]战斗场景的截图</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (15) (1) (1) (1) (1).png" alt=""><figcaption><p>来自《最终幻想XV》[Square Enix, 2016]战斗场景的截图</p></figcaption></figure>
 
 那么你已经来到正确的地方了！
 

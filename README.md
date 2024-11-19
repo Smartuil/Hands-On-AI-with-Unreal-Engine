@@ -18,4 +18,4 @@ layout:
 感谢腾讯元宝的倾情赞助😘
 {% endhint %}
 
-<figure><img src=".gitbook/assets/image (19) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src=".gitbook/assets/image (19) (1) (1).png" alt=""><figcaption></figcaption></figure>
