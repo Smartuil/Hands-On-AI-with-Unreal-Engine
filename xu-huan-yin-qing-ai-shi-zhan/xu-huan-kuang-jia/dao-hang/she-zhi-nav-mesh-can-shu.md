@@ -4,7 +4,7 @@
 
 让我们导航到**世界大纲**，您会发现场景中已经放置了一个**RecastNavMesh-Default** actor，如下面的屏幕截图所示：
 
-<figure><img src="../../../.gitbook/assets/image (82).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (224).png" alt=""><figcaption></figcaption></figure>
 
 事实上，当你拖拽一个**导航网格边界体积**时，如果地图没有默认的**RecastNavMesh**，系统会自动创建一个。如果我们点击它，就可以在**详情面板**中更改它的所有属性。
 
@@ -14,13 +14,13 @@
 
 正如名称所示，这些设置与如何详细可视化我们生成的 Nav Mesh 相关。特别是，我们将能够看到生成的多边形、三角形以及多边形如何连接。我们将在第 12 章“AI - 导航、EQS 和性能分析调试方法”中详细讨论这些内容，届时我们将讨论调试工具：
 
-<figure><img src="../../../.gitbook/assets/image (83).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (225).png" alt=""><figcaption></figcaption></figure>
 
 **生成设置**
 
 这些设置与导航网格的生成有关。通常，默认值已经足够好，因此只有在你知道自己在做什么的情况下才应该修改这些值。以下截图显示了这些设置：
 
-<figure><img src="../../../.gitbook/assets/image (84).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (226).png" alt=""><figcaption></figcaption></figure>
 
 要了解这些设置，最好的方法是先在一个示例地图中试用它们的参数，然后在您自己的地图中进行试用。之后，您需要检查这样做的结果（特别是使用在第12章“AI导航、EQS和性能分析调试方法”中介绍的视觉调试工具）。为了帮助您开始，让我们看看主要的设置：
 
@@ -35,7 +35,7 @@
 
 值得一提的是，即使我们不详细讨论这些内容，也可以从项目设置中更改相同的导航设置；有一个特定的标签页用于此操作，如下面的图片所示：
 
-<figure><img src="../../../.gitbook/assets/image (85).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (227).png" alt=""><figcaption></figcaption></figure>
 
 值得注意的是，关于“代理”的最后一个选项卡。在这里，可以创建一个“**支持的代理**”数组，以便不同的代理可以有不同的方式来导航导航网格。例如，老鼠可能有与巨型巨魔非常不同的导航网格。实际上，老鼠也可以进入小洞，而巨魔不能。在这里，您将能够指定您拥有的所有不同种类的代理：
 

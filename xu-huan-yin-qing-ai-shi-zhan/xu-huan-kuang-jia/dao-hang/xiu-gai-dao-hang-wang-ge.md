@@ -8,15 +8,15 @@
 
 你可以在模式面板的体积选项卡下找到这个设置，然后进入导航网格边界体积：
 
-<figure><img src="../../../.gitbook/assets/image (38) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (180).png" alt=""><figcaption></figcaption></figure>
 
 一旦这个体被放置在地图中，默认值是移除该体内部的**导航网格**部分，如下面的截图所示：
 
-<figure><img src="../../../.gitbook/assets/image (39) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (181).png" alt=""><figcaption></figcaption></figure>
 
 这在您有AI不想进入的区域或修复导航网格的伪影时非常有用。尽管**导航修改器体**指定了地图的一部分，但行为是在**导航网格区域**中指定的。这意味着，如果我们查看**导航网格修改器体**的设置，我们只能找到与导航相关的一个设置，名为**区域类**：
 
-<figure><img src="../../../.gitbook/assets/image (40) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (182).png" alt=""><figcaption></figcaption></figure>
 
 因此，这个体只能指定地图中应用特定**区域类**的一部分。默认情况下，区域类是**NavArea\_Null**，它在地图与该体重叠的部分“移除”导航网格。我们将在下一节中探讨**导航网格区域**的工作原理。
 
@@ -32,7 +32,7 @@
 
 在 Unreal 中，成本是在类内指定的。如果你点击一个 **Nav Modifier Volume**，你会注意到你需要指定一个 **Area Class**，如下面的截图所示：
 
-<figure><img src="../../../.gitbook/assets/image (41) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (183).png" alt=""><figcaption></figcaption></figure>
 
 正如你可能猜到的，默认值是 **NavArea\_Null**，它对进入的成本是无限的，导致 AI 从不进入该区域。导航系统足够智能，甚至不会去生成那个区域，并将其视为不可导航的区域。
 
@@ -43,7 +43,7 @@
 * NavArea\_Null：这使得该区域对所有代理都不可导航。
 * NavArea\_Obstacle：这为该区域分配了更高的成本，因此代理会试图避开它：
 
-<figure><img src="../../../.gitbook/assets/image (43) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (185).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 你会注意到，如果你创建一个新的蓝图，或者甚至在 Visual Studio 中打开源代码，都会有 NavArea\_Meta 和它的子类 NavArea\_MetaSwitchingActor。然而，如果你看它们的代码，它们主要包含一些已经废弃的代码。因此，我们在这本书中不会使用它们。
@@ -55,37 +55,37 @@
 
 在蓝图中创建一个新的**NavArea**类非常简单；你只需要创建一个新的蓝图，该蓝图继承自**NavArea**类，如下面的截图所示：
 
-<figure><img src="../../../.gitbook/assets/image (44) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (186).png" alt=""><figcaption></figcaption></figure>
 
 根据约定，类名应以“_NavArea\__”开头。我们将其重命名为**NavArea\_BPJungle**（我添加了BP以示我们是用蓝图创建的，因为我们在蓝图和C++中重复了相同的任务）。这在内容浏览器中应该是这样的：
 
-<figure><img src="../../../.gitbook/assets/image (45) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (187).png" alt=""><figcaption></figcaption></figure>
 
 然后，如果你打开蓝图，你将能够为区域分配自定义成本。你也可以为你的区域指定特定的颜色，以便在构建导航网格时容易识别。这是默认情况下详情面板的样子：
 
-<figure><img src="../../../.gitbook/assets/image (46).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (188).png" alt=""><figcaption></figcaption></figure>
 
 现在，我们可以根据需要自定义。例如，我们可能希望进入丛林有一定的成本，穿越丛林的成本稍高。我们将使用亮绿色作为颜色，如下面的截图所示：
 
-<figure><img src="../../../.gitbook/assets/image (47).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (189).png" alt=""><figcaption></figcaption></figure>
 
 一旦编译并保存，我们可以将这个新创建的区域分配给**导航修改器体积**，如下面的截图所示：
 
-<figure><img src="../../../.gitbook/assets/image (48).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (190).png" alt=""><figcaption></figcaption></figure>
 
 这就是我们的成品类在我们的关卡中看起来的样子（如果导航网格可见）：
 
-<figure><img src="../../../.gitbook/assets/image (49).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (191).png" alt=""><figcaption></figcaption></figure>
 
 **创建C++中的NavArea类**
 
 在C++中创建**NavArea**类也很简单。首先，你需要创建一个新的C++类，该类继承自**NaoArea**类，如下面的截图所示：
 
-<figure><img src="../../../.gitbook/assets/image (50).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (192).png" alt=""><figcaption></figcaption></figure>
 
 根据约定，名称应以“_NavArea\__”开头。因此，您可以将其重命名为**NavArea\_Desert**（只是为了改变AI可能面临的地形种类，因为我们之前创建了一个丛林）并将其放在“**Chapter3/Navigation**”中：
 
-<figure><img src="../../../.gitbook/assets/image (51).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (193).png" alt=""><figcaption></figcaption></figure>
 
 一旦创建了该类，您只需要在构造函数中分配参数。为了方便起见，这里是我们声明一个简单构造函数的类定义：
 
@@ -126,11 +126,11 @@ UNavArea_Desert::UNavArea_Desert()
 
 一旦创建了该类，可以将其设置为**导航修改器体积**的一部分，如下面的截图所示：
 
-<figure><img src="../../../.gitbook/assets/image (52).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (194).png" alt=""><figcaption></figcaption></figure>
 
 结果，你将能够在Nao网格中看到你的自定义区域（在这种情况下，使用黄色）：
 
-<figure><img src="../../../.gitbook/assets/image (54).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (196).png" alt=""><figcaption></figcaption></figure>
 
 **导航链接代理**
 
@@ -146,22 +146,22 @@ UNavArea_Desert::UNavArea_Desert()
 
 要使用链接连接两个区域，我们需要转到“所有类别”选项卡中的“模式”面板，并选择“导航链接代理”，如下面的截图所示：
 
-<figure><img src="../../../.gitbook/assets/image (55).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (197).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 或者，你可以在“模式”面板中搜索它，以便更快地找到它：
 
-![](<../../../.gitbook/assets/image (56).png>)
+![](<../../../.gitbook/assets/image (198).png>)
 {% endhint %}
 
 一旦链接被放置在关卡中，你会看到一个“箭头/链接”，你将能够修改链接的起点和终点。它们被称为“**左**”和“**右**”，设置它们位置的最简单方法是通过拖放（和放置）它们在视口中。因此，你将能够连接导航网格的两个不同部分。正如我们在下面的截图中看到的，如果导航网格可见（使用P键启用），你会看到一个箭头连接“**右**”和“**左**”节点。这个箭头指向两个方向。这将导致链接成为双向的：
 
-<figure><img src="../../../.gitbook/assets/image (57).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (199).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 你可能注意到有两个箭头，其中一个颜色较深的绿色。此外，这个第二个箭头/链接可能并不完全在你放置右端的位置，而是附着在Nav Mesh上。你可以在下面的截图中更清楚地看到这个第二个箭头：
 
-![](<../../../.gitbook/assets/image (58).png>)
+![](<../../../.gitbook/assets/image (200).png>)
 
 这实际上是Nav Mesh连接的方式，由于链接的投影设置。我们将在下一节中探讨这个设置。
 {% endhint %}
@@ -182,11 +182,11 @@ UNavArea_Desert::UNavArea_Desert()
 
 简单链接存在于导航代理链接内的**点链接数组**中，这意味着在单个导航代理链接中可以有多条简单链接。要创建另一个简单链接，您可以向详细信息面板中的简单节点数组添加一个额外元素，如下面的截图所示：
 
-<figure><img src="../../../.gitbook/assets/image (59).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (201).png" alt=""><figcaption></figcaption></figure>
 
 一旦我们有了更多的简单链接，我们可以设置**开始**和**结束**位置，就像我们对第一个链接所做的那样（通过选择它们并在视口中移动它们，就像对其他任何演员一样）。下面的截图显示了我将两个简单链接放置在同一个导航代理链接上，彼此相邻：
 
-<figure><img src="../../../.gitbook/assets/image (60).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (202).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 每次我们创建一个 _Nao Link 代理_时，它都会附带一个 _Simple Link_ 数组。
@@ -194,14 +194,14 @@ UNavArea_Desert::UNavArea_Desert()
 
 对于 Point Links 数组中的每个 **Simple Link**，我们可以通过展开该项来访问其设置。以下截图显示了第一个 Simple Link 的设置：
 
-<figure><img src="../../../.gitbook/assets/image (61).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (203).png" alt=""><figcaption></figcaption></figure>
 
 让我们理解这些各种设置：
 
 * **左端和右端**：链接的左端和右端的位置。
 * **左投影高度和右投影高度**：如果这个数值大于零，那么链接将被投影到导航几何体（使用由该数值指定的最大长度的跟踪）的左端和右端。你可以在下面的截图中看到这个投影的链接：
 
-<figure><img src="../../../.gitbook/assets/image (63).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (205).png" alt=""><figcaption></figcaption></figure>
 
 * **方向**：这指定了链接工作的方向。此外，视口中的箭头也会相应更新。可能的选项如下：
   * **双向**：链接是双向的（请记住，AI需要配备在两个方向上穿越链接的能力；例如，如果我们正在越过一个悬崖，代理需要能够从它上面掉下来（链接的一个方向）并跳跃（链接的另一个方向）。
@@ -209,7 +209,7 @@ UNavArea_Desert::UNavArea_Desert()
   * **从右到左**：链接只能从右端到左端跨越（代理仍然需要具有进入该链接方向的能力）。
 * **贴紧半径和高度半径**：您可能已经注意到一个连接每条链接末端的圆柱体。这两个设置控制该圆柱体的半径和高度。有关此圆柱体的使用的更多信息，请检查“贴紧最便宜区域”。以下截图显示第一个链接有一个更大的圆柱体（半径和高度都更大）：
 
-<figure><img src="../../../.gitbook/assets/image (64).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (206).png" alt=""><figcaption></figcaption></figure>
 
 * **描述**：这只是您可以插入方便描述的字符串；它对导航或链接没有影响。
 * **贴紧最便宜区域**：如果启用，它将尝试将链接末端连接到由贴紧半径和高度半径指定的圆柱体内可用的三角形中最便宜的区域。例如，如果圆柱体与默认导航区域和BP丛林导航区域（我们之前创建的）相交，链接将直接连接到默认导航区域，而不是丛林。
@@ -229,7 +229,7 @@ UNavArea_Desert::UNavArea_Desert()
 
 然而，让我们看一下智能链接的设置：
 
-<figure><img src="../../../.gitbook/assets/image (65).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (207).png" alt=""><figcaption></figcaption></figure>
 
 * **启用区域类别**：这是链接启用时假设的 Nao 区域。默认是 NavArea\_Default。
 * **禁用区域类别**：这是链接禁用时假设的 Nav 区域。这意味着，当链接禁用时，如果分配了可穿越的区域，它仍然可以被穿越（例如，当链接禁用时，我们可能希望穿越的成本非常高，但我们仍然希望它能够被穿越。当然，默认是 NavArea\_Default，这意味着它是不可穿越的）。
@@ -279,7 +279,7 @@ bool HasMovingAgents() const;
 
 之前我们提到，智能链接可以在运行时向其附近的代理/演员广播其状态变化的信息。你可以通过广播设置来改变智能链接如何广播这些信息，这些设置就在智能链接设置的下方：
 
-<figure><img src="../../../.gitbook/assets/image (66).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (208).png" alt=""><figcaption></figcaption></figure>
 
 这些设置相当直观，但让我们快速浏览一下：
 
@@ -295,7 +295,7 @@ bool HasMovingAgents() const;
 
 最后，值得一提的是，当生成导航网格时，导航链接代理可以创建一个障碍盒。你可以在导航链接代理的详细信息面板中找到这些设置，如下面的截图所示：
 
-<figure><img src="../../../.gitbook/assets/image (67).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (209).png" alt=""><figcaption></figcaption></figure>
 
 这些设置允许你决定障碍盒是否激活/使用，它的尺寸/范围及其偏移量，以及导航区域的类型。
 
@@ -317,11 +317,11 @@ bool HasMovingAgents() const;
 
 导航过滤允许我们定义在特定时间段内如何执行路径查找的具体规则。你可能已经注意到，每次我们执行导航任务，无论是在蓝图还是C++中，都有一个可选参数用于插入导航过滤器。以下是一些具有此可选过滤参数的蓝图节点（C++函数也是如此）的示例：
 
-<figure><img src="../../../.gitbook/assets/image (68).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (210).png" alt=""><figcaption></figcaption></figure>
 
 甚至**行为树**中的“**移动到**”节点也有**导航过滤器**选项：
 
-<figure><img src="../../../.gitbook/assets/image (69).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (211).png" alt=""><figcaption></figcaption></figure>
 
 当然，一旦插入了过滤器，路径寻路将会相应地表现。这意味着使用**导航过滤器**非常简单。然而，我们如何在蓝图和C++中创建**导航过滤器**呢？让我们一起来了解一下。
 
@@ -331,23 +331,23 @@ bool HasMovingAgents() const;
 
 在蓝图中创建一个**导航过滤器**，我们需要开始创建一个新的蓝图，该蓝图继承自`NavigationQueryFilter`，如下面的截图所示：
 
-<figure><img src="../../../.gitbook/assets/image (70).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (212).png" alt=""><figcaption></figcaption></figure>
 
 根据惯例，类的名称应该以“NavFilter\_”开头。我们将其重命名为 NavFilter\_BPFastJungle（我添加了 BP，以便记住我是用蓝图创建这个的，因为我们在蓝图和 C++ 中重复同样的任务）。这在内容浏览器中应该如下所示：
 
-<figure><img src="../../../.gitbook/assets/image (71).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (213).png" alt=""><figcaption></figcaption></figure>
 
 一旦我们打开蓝图，我们可以在详细信息面板中找到其选项：
 
-<figure><img src="../../../.gitbook/assets/image (72).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (214).png" alt=""><figcaption></figcaption></figure>
 
 正如你所看到的，这里有一个**区域数组**和两套包含和排除（Nav）标志。不幸的是，我们并未涵盖导航标志，因为它们超出了本书的范围，并且只能在编写时通过C++进行分配。然而，**区域数组**相当有趣。让我们添加一个新的区域，并使用我们的**NavArea\_BPJungle**作为**区域类**，如下面的截图所示：
 
-<figure><img src="../../../.gitbook/assets/image (73).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (215).png" alt=""><figcaption></figcaption></figure>
 
 现在，我们可以覆盖丛林区域的**旅行成本**和**进入成本**，这些成本将替代我们在区域类中指定的成本，如果使用了此过滤器。请记住，勾选选项名称旁边的复选框以启用编辑。例如，我们可以将**旅行成本**设置为**0.6**（因为我们可以在丛林中快速移动而没有任何问题），并将**进入成本**设置为零：
 
-<figure><img src="../../../.gitbook/assets/image (74).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (216).png" alt=""><figcaption></figcaption></figure>
 
 现在，我们已经准备好了。如果你更喜欢在丛林中旅行，过滤器已经可以使用！
 
@@ -357,7 +357,7 @@ bool HasMovingAgents() const;
 
 如果你也遵循了导航区域的C++部分，那么你的项目中也应该有沙漠区域。作为一个可选步骤，我们可以为过滤器添加第二个区域。想象一下，通过使用在丛林中更快移动的道具或能力，我们的角色对阳光非常敏感，非常容易晒伤，这显著降低了他们的健康值。因此，如果使用了这种过滤器，我们可以为沙漠区域设置更高的成本。只需添加另一个区域，并将**区域类别**设置为**NavArea\_Desert**。然后，覆盖成本；例如，**旅行成本**为**2.5**，**进入成本**为**10**：
 
-<figure><img src="../../../.gitbook/assets/image (75).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (217).png" alt=""><figcaption></figcaption></figure>
 
 一旦你完成了编辑设置，保存蓝图。从现在开始，你将能够在导航系统内使用这个过滤器。这就完成了如何在蓝图中创建**导航过滤器**的教程。
 
@@ -367,11 +367,11 @@ bool HasMovingAgents() const;
 
 首先，我们需要创建一个新的C++类，该类继承自**NavigationQueryFilter**，如下面的截图所示：
 
-<figure><img src="../../../.gitbook/assets/image (77).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (219).png" alt=""><figcaption></figcaption></figure>
 
 根据约定，类名应以“_NavFilter\__”开头。因此，我们将其重命名为“**NavFilter\_DesertAnimal**”，并将其放置在“**Chapter3/Navigation**”中：
 
-<figure><img src="../../../.gitbook/assets/image (78).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (220).png" alt=""><figcaption></figcaption></figure>
 
 为了设置其属性，我们需要创建一个默认构造函数。在头文件（.h）中编写以下内容：
 

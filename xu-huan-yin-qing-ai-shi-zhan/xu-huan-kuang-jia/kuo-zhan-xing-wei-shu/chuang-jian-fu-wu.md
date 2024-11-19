@@ -8,21 +8,21 @@
 
 就像你在任务和装饰器中所做的那样，你可以通过按照行为树编辑器顶部栏上的**新服务**按钮来创建一个新的**蓝图服务**，如下图所示：
 
-<figure><img src="../../../.gitbook/assets/image (23).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (39).png" alt=""><figcaption></figcaption></figure>
 
 或者，您可以生成继承自**BTService\_BlueprintBase**的蓝图类，如下图所示：
 
-<figure><img src="../../../.gitbook/assets/image (24).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (40).png" alt=""><figcaption></figcaption></figure>
 
 无论如何，命名规范是以"**BTService\_**"（代表行为树服务）为前缀。例如，我们可以将我们的类命名为类似BTService\_BPMyFirstService的东西：
 
-<figure><img src="../../../.gitbook/assets/image (25).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (41).png" alt=""><figcaption></figcaption></figure>
 
 就像任务和装饰器一样，所有可重写的函数都有两个不同的版本： AI 和非 AI（通用）。概念完全相同：如果只实现了其中一个 （为保持项目一致性，建议重写 AI 版本），那么就会调用该函数。如果两者都实现了，当 Pawn 被 AI 控制器占据时，调用 AI 函数，否则调用通用函数。&#x20;
 
 这里有四个可重写的函数：
 
-<figure><img src="../../../.gitbook/assets/image (26).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (42).png" alt=""><figcaption></figcaption></figure>
 
 * 接收激活：当服务变为活动状态时调用。用于初始化服务。
 * 接收滴答：当服务滴答时调用。主要是，服务连续执行某些操作（例如更新黑板变量），因此这是服务最重要的功能。从性能上讲，建议将其保持尽可能短。此外，回到行为树，可以调整服务滴答的频率（在最小值和最大值之间的随机值）。然而，理论上实现不应知道服务滴答的频率；它只需要提供一个“服务”。然后，服务的使用者，行为树，将决定它希望该服务的频率。
@@ -35,11 +35,11 @@
 
 与我们在C++中扩展任务和装饰器的方式非常相似，你也可以在C++中扩展服务。要继承的基类是BTService，如下图所示：
 
-<figure><img src="../../../.gitbook/assets/image (27).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (43).png" alt=""><figcaption></figcaption></figure>
 
 惯例是以"BTService\_"（行为树服务）为服务类名前缀。 我们类的一个可能名称是BTService\_MyFirstService：&#x20;
 
-<figure><img src="../../../.gitbook/assets/image (28).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (44).png" alt=""><figcaption></figcaption></figure>
 
 一旦我们在C++中创建了服务，其余部分与在C++中扩展/创建装饰器的方式非常相似。这里是要重写的函数（取自引擎源代码）：
 

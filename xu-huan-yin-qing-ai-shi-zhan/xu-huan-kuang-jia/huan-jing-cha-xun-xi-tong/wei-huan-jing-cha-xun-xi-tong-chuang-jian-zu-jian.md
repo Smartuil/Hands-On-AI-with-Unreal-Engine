@@ -12,17 +12,17 @@
 
 要创建一个上下文，我们需要从EnvQueryContext\_BlueprintBase类继承。在蓝图的情况下，在创建时，只需选择突出显示的类，如下图所示：
 
-<figure><img src="../../../.gitbook/assets/image (86).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (228).png" alt=""><figcaption></figcaption></figure>
 
 关于名称，约定是保留前缀“EnvQueryContext\_”。我们可以将我们的上下文称为“EnvQueryContext\_BPPlayer”。&#x20;
 
 对于蓝图上下文，您可以选择实现以下功能之一：&#x20;
 
-<figure><img src="../../../.gitbook/assets/image (88).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (230).png" alt=""><figcaption></figcaption></figure>
 
 每个将为环境查询提供一个上下文。 我们可以覆盖Provide Single Actor功能，然后返回玩家Pawn，就这么简单：
 
-<figure><img src="../../../.gitbook/assets/image (89).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (231).png" alt=""><figcaption></figcaption></figure>
 
 因此，我们现在拥有了一个能够获取玩家引用的上下文。
 
@@ -30,11 +30,11 @@
 
 在创建C++上下文的情况下，继承自**EnvQueryContext**类，如下图所示：
 
-<figure><img src="../../../.gitbook/assets/image (90).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (232).png" alt=""><figcaption></figcaption></figure>
 
 约定是相同的，即以"**EnvQueryContext\_**"为前缀。我们将我们的类称为"**EnvQueryContext\_Player**"：
 
-<figure><img src="../../../.gitbook/assets/image (91).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (233).png" alt=""><figcaption></figcaption></figure>
 
 在C++中，只有一个函数需要重写：ProvideContext()。因此，我们只需要在.h文件中重写它，如下所示：
 
@@ -84,11 +84,11 @@ QueryInstance, FEnvQueryContextData& ContextData) const
 
 与创建上下文类似，我们可以创建自定义生成器。然而，我们不会详细讨论这个，因为它们超出了本书的范围。 在蓝图的情况下，继承自EnvQueryGenerator\_BlueprintBase类，如下图所示：
 
-<figure><img src="../../../.gitbook/assets/image (92).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (234).png" alt=""><figcaption></figcaption></figure>
 
 在C++中，你需要继承自EnvQueryGenerator：
 
-<figure><img src="../../../.gitbook/assets/image (93).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (235).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 您可能想直接从EnvQueryGenerator\_ProjectedPoints开始，因为您已经准备好了所有的投影。这样做的话，您只需要关注它的生成。
@@ -98,6 +98,6 @@ QueryInstance, FEnvQueryContextData& ContextData) const
 
 在当前版本的虚幻引擎中，无法在蓝图中创建测试 - 我们只能使用C++来完成。您可以通过扩展EnvQueryTest类来实现这一点：
 
-<figure><img src="../../../.gitbook/assets/image (94).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (236).png" alt=""><figcaption></figcaption></figure>
 
 不幸的是，这也超出了本书的范围。然而，探索虚幻引擎源代码将为您提供大量的信息和几乎无限的学习资源。

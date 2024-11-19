@@ -18,7 +18,7 @@
 
 然而，这个故事的核心始于1931年，当时奥地利逻辑学家、数学家和哲学家库尔特·哥德尔证明了所有一阶逻辑中的真陈述都是可推导的。另一方面，这对于高阶逻辑并不成立，其中一些真（或假）陈述是无法证明的。这使得一阶逻辑成为自动化推导逻辑后果的良好候选者。听起来很复杂吗？那么你可以想象这对他的传统主义同时代人的耳朵来说是怎样的。
 
-<figure><img src="../../../.gitbook/assets/image (28) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (153).png" alt=""><figcaption></figcaption></figure>
 
 1937年，英国计算机科学家、数学家、逻辑学家、密码学家、哲学家和理论生物学家艾伦·图灵指出了“智能机器”的一些局限性，即停机问题：除非程序实际运行，否则无法预先判断它是否会终止。这在理论计算机科学中有许多影响。然而，根本性的步骤发生在十三年后的1950年，当时艾伦·图灵撰写了他的著名论文“计算机器和智慧”，在其中他谈到了模仿游戏，现在通常被称为“图灵测试”：一种定义智能机器的方式。
 
@@ -44,35 +44,35 @@
 
 视频游戏中人工智能的最初形式是基础性的，用于像Pong（雅达利，1972年）、Space Invaders（Midway Games West, Inc.，1978年）等游戏中。实际上，除了移动球拍试图接住球或移动外星人向玩家靠近外，我们无法做更多的事情：
 
-<figure><img src="../../../.gitbook/assets/image (1) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>1978年Midway Games West, Inc.的《太空侵略者》截图，其中使用了基础形式的AI来控制外星人</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (154).png" alt=""><figcaption><p>1978年Midway Games West, Inc.的《太空侵略者》截图，其中使用了基础形式的AI来控制外星人</p></figcaption></figure>
 
 第一个使用显著AI的著名游戏是《吃豆人》\[Midway Games West, Inc.,1979]。四个怪物（后来由于Atari 2600的闪烁端口被称为鬼）使用有限状态机（FSM）来追逐（或逃离）玩家：
 
-<figure><img src="../../../.gitbook/assets/image (2) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (155).png" alt=""><figcaption></figcaption></figure>
 
 在20世纪80年代，游戏中的AI并没有太大变化。直到《魔兽争霸：人类与兽人》\[暴雪娱乐，1994]的推出，视频游戏中才成功实现了路径查找系统。我们将在第三章“导航”中探讨《虚幻》中的导航系统：
 
-<figure><img src="../../../.gitbook/assets/image (3) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>这是《魔兽争霸：人类与兽人》[暴雪娱乐，1994]的截图，其中的单位（此截图中的兽人平民和士兵）使用路径查找算法在地图中移动。</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (156).png" alt=""><figcaption><p>这是《魔兽争霸：人类与兽人》[暴雪娱乐，1994]的截图，其中的单位（此截图中的兽人平民和士兵）使用路径查找算法在地图中移动。</p></figcaption></figure>
 
 这段文字可能的意思是：
 
 可能是开始让人们关注人工智能的游戏是《**Goldeneye 007**》\[Rare Ltd., 1997]，这款游戏展示了人工智能如何提升游戏体验。尽管它仍然依赖于有限状态机（FSMs），但其创新之处在于角色可以相互看到并做出相应的反应。我们将在第5章“代理意识”中探讨代理意识。这在当时是一个热门话题，一些游戏将其作为主要的游戏机制，例如《**Thief: The Dark Project**》\[Looking Glass Studios, Inc., 1998]：
 
-<figure><img src="../../../.gitbook/assets/image (4) (1) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>来自《Goldeneye 007》[Rare Ltd., 1997]的截图，这款游戏改变了人们对电子游戏人工智能的认知</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (157).png" alt=""><figcaption><p>来自《Goldeneye 007》[Rare Ltd., 1997]的截图，这款游戏改变了人们对电子游戏人工智能的认知</p></figcaption></figure>
 
 以及《**Metal Gear Solid**》\[Konami Corporation, 1998]：
 
-<figure><img src="../../../.gitbook/assets/image (5) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>来自《Metal Gear Solid》[Konami Corporation, 1998]的截图</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (158).png" alt=""><figcaption><p>来自《Metal Gear Solid》[Konami Corporation, 1998]的截图</p></figcaption></figure>
 
 另一个热门话题是模拟士兵在战斗中的情绪。首批实现情绪模型的游戏之一是《**战锤：暗之曙光**》\[Mindscape, 1998]，但只有《**幕府将军：全面战争**》\[The Creative Assembly, 2000]才能在这些模型的使用上取得了极大的成功，大量士兵没有出现性能问题：
 
-<figure><img src="../../../.gitbook/assets/image (9) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>这是《战锤：暗之曙光》的截图，这是首批为士兵使用情绪模型的游戏之一。</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (162).png" alt=""><figcaption><p>这是《战锤：暗之曙光》的截图，这是首批为士兵使用情绪模型的游戏之一。</p></figcaption></figure>
 
-<figure><img src="../../../.gitbook/assets/image (10) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>这是《幕府将军：全面战争》的截图。士兵的情绪模型比《战锤：暗之曙光》中的更复杂，但它成功地用于大量士兵。</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (163).png" alt=""><figcaption><p>这是《幕府将军：全面战争》的截图。士兵的情绪模型比《战锤：暗之曙光》中的更复杂，但它成功地用于大量士兵。</p></figcaption></figure>
 
 一些游戏甚至将AI作为游戏玩法的核心。尽管《**Creatures**》\[Cyberlife Technology Ltd., 1997]是最早这样做的游戏之一，但这个概念在《**The Sims**》\[Maxis Software, Inc., 2000]或《**Black and White**》\[Lionhead Studios Ltd., 2001]等游戏中更为明显：
 
-<figure><img src="../../../.gitbook/assets/image (11) (1) (1) (1) (1) (1).png" alt=""><figcaption><p>《The Sims》的截图。一个模拟角色（角色）正在烹饪，这是游戏中由AI设计的复杂行为的一部分。</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (164).png" alt=""><figcaption><p>《The Sims》的截图。一个模拟角色（角色）正在烹饪，这是游戏中由AI设计的复杂行为的一部分。</p></figcaption></figure>
 
 在过去的20年里，许多AI技术被采用和/或开发。然而，如果游戏不需要高级AI，你可能会发现仍然广泛使用的有限状态机（FSMs），以及我们将在第2章“行为树和黑板”中开始探索的行为树。
 

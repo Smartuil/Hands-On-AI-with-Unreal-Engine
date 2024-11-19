@@ -17,7 +17,7 @@ bAutoRegisterAllPawnsAsSources=false
 
 像其他组件一样，它可以被添加到蓝图中：
 
-<figure><img src="../../../.gitbook/assets/image (6) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (51).png" alt=""><figcaption></figcaption></figure>
 
 如果您选择它，您将在详细信息面板中看到它只有两个参数：&#x20;
 

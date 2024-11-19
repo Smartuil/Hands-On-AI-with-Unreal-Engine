@@ -8,4 +8,4 @@
 
 最后，我给项目命名为“UnrealAIBook”，如下面的截图所示。你可以在以下链接找到项目文件：http://hog.red/ AIBook2019ProjectFiles（链接是区分大小写的）：
 
-<figure><img src="../../../.gitbook/assets/image (27) (1) (1) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (152).png" alt=""><figcaption></figcaption></figure>

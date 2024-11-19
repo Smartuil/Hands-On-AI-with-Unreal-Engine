@@ -8,21 +8,21 @@
 
 要创建蓝图装饰器，就像我们为任务所做的那样，您可以在行为树编辑器的顶部栏中按“新建装饰器”按钮，如下图所示：
 
-<figure><img src="../../../.gitbook/assets/image (7) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (23).png" alt=""><figcaption></figcaption></figure>
 
 或者，你可以生成一个继承自BTDecorator\_BlueprintBase的蓝图类，如下图所示：&#x20;
 
-<figure><img src="../../../.gitbook/assets/image (11) (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (27).png" alt=""><figcaption></figcaption></figure>
 
 无论如何，命名规范是在装饰器前加上"BTDecorator\_"（代表行为树装饰器）。例如，我们可以将我们的类命名为BTDecorator\_BPMyFirstDecorator：
 
-<figure><img src="../../../.gitbook/assets/image (18).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (34).png" alt=""><figcaption></figcaption></figure>
 
 关于任务，所有可重写的函数都有两种形式：AI和非AI。概念完全相同。如果只实现了其中一个（为了保持项目的一致性，建议重写AI版本），那么就会调用该函数。如果两者都实现了，当Pawn被AI控制器占据时，调用AI函数，在所有其他情况下则调用非AI函数。
 
 以下是Decorator可以扩展的六个函数：
 
-<figure><img src="../../../.gitbook/assets/image (19).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (35).png" alt=""><figcaption></figcaption></figure>
 
 * 执行条件检查：这是最重要的功能，也是唯一一个你可能需要重写的功能（如果你没有需要处理的动态事物）。它返回一个布尔值，表示条件检查是否成功。
 * 接收执行开始：当底层节点（复合节点或任务节点）的执行开始时调用此功能。使用此功能初始化装饰器。
@@ -33,7 +33,7 @@
 
 如你所见，装饰器非常简单（至少在蓝图中是这样）；主要是，你只需要重写/实现执行条件检查功能，该功能返回一个布尔值：&#x20;
 
-<figure><img src="../../../.gitbook/assets/image (20).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (36).png" alt=""><figcaption></figcaption></figure>
 
 无论如何，我们将在接下来的三个章节中查看从零开始创建蓝图装饰器的具体示例。
 
@@ -41,11 +41,11 @@
 
 与我们在C++中扩展任务的方式非常相似，你也可以在C++中扩展装饰器。要继承的基类是BTDecorator，如下图所示：
 
-<figure><img src="../../../.gitbook/assets/image (21).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (37).png" alt=""><figcaption></figcaption></figure>
 
 通常，约定是以"BTDecorator\_"（行为树装饰器）为装饰器前缀。我们的装饰器可能的一个名字是"BTDecorator\_MyFirstDecorator"：
 
-<figure><img src="../../../.gitbook/assets/image (22).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (38).png" alt=""><figcaption></figcaption></figure>
 
 直接进入C++，这些是可重写的函数，摘自引擎源代码（有很多）：
 
