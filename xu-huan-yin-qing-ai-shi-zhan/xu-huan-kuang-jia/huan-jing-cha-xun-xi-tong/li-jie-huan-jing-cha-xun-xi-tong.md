@@ -30,7 +30,7 @@
 
 你可以通过右键点击你的内容浏览器，然后选择**人工智能 | 环境查询**，来创建一个新的**环境查询**，如下图所示：
 
-<figure><img src="../../../.gitbook/assets/image (4).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (4) (1).png" alt=""><figcaption></figcaption></figure>
 
 {% hint style="info" %}
 请记住，如果环境查询系统（EQS）未启用，此选项将不会出现。
@@ -38,15 +38,15 @@
 
 这就是它在内容浏览器中的样子：
 
-<figure><img src="../../../.gitbook/assets/image (5).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (5) (1).png" alt=""><figcaption></figcaption></figure>
 
 如果我们双击它来打开它，Unreal会打开一个特定且专用的**环境查询编辑器**。这个编辑器看起来是这样的：
 
-<figure><img src="../../../.gitbook/assets/image (6).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (6) (1).png" alt=""><figcaption></figcaption></figure>
 
 正如你所看到的，它非常类似于行为树，但你只能将生成器节点附加到**根节点**（只有一个），这也会使其成为叶子节点。因此，整个“树”将仅仅是带有**生成器**的**根节点**。实际上，通过使用类似行为树的编辑器，你可以轻松地设置**环境查询**。在唯一的生成器节点上，你可以附加一个或多个**测试**——要么是生成器本身，要么是上下文。这是一个例子：
 
-<figure><img src="../../../.gitbook/assets/image (7).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (7) (1).png" alt=""><figcaption></figcaption></figure>
 
 在下一部分中，我们将理解这意味着什么。
 
@@ -88,7 +88,7 @@
 
 每个测试在详细信息面板中的选项具有以下结构：
 
-<figure><img src="../../../.gitbook/assets/image (8).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (8) (1).png" alt=""><figcaption></figcaption></figure>
 
 * **Test**：在这里，你可以选择**测试的目的**是**过滤和评分**，还是其中的一部分，并添加描述（这对测试没有影响，但你可以将其视为回忆测试内容的注释）。此外，可能还有其他选项，如你可以与导航系统一起使用的投影数据（适用于依赖导航系统的测试）。 Specific Test: 这是存放测试具体选项的地方。每个测试的具体选项可能会有所不同。
 * **Specific Test**：这是存放测试具体选项的地方。每个测试的具体选项可能会有所不同。
@@ -104,17 +104,17 @@
 
 总结各个组件及其重要性，并为您提供一个视觉表示，以下是一个您可以参考的图表：
 
-<figure><img src="../../../.gitbook/assets/image (9).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (9) (1).png" alt=""><figcaption></figcaption></figure>
 
 **在行为树中运行环境查询**
 
 最后，要完全理解环境查询如何工作的最后一步是看它如何在行为树中运行。幸运的是，我们有一个名为“run EQS”的节点，这是一个内置的行为树任务。在一个假设的行为树编辑器中，它看起来如下所示：
 
-<figure><img src="../../../.gitbook/assets/image (10).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (10) (1).png" alt=""><figcaption></figcaption></figure>
 
 可以在详细信息面板中找到的可能设置如下：
 
-<figure><img src="../../../.gitbook/assets/image (11).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (11) (1).png" alt=""><figcaption></figcaption></figure>
 
 如你所见，许多内容已经被弃用（所以只需忽略它们），但我已经突出了最重要的部分。以下是它们的解释：
 

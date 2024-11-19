@@ -38,7 +38,7 @@
 
 在C++中，只有一个函数需要重写：ProvideContext()。因此，我们只需要在.h文件中重写它，如下所示：
 
-<pre class="language-cpp"><code class="lang-cpp">#include "CoreMinimal.h"
+<pre class="language-cpp" data-line-numbers><code class="lang-cpp">#include "CoreMinimal.h"
 #include "EnvironmentQuery/EnvQueryContext.h"
 #include "EnvQueryContext_Player.generated.h"
 /**
@@ -56,6 +56,7 @@ class UNREALAIBOOK_API UEnvQueryContext_Player : public UEnvQueryContext
 
 在实现文件中，我们可以提供上下文。我不打算详细讲解如何操作——你可以阅读其他上下文的代码以帮助你理解这一点。无论如何，我们的.cpp文件可以有如下类似内容（我本可以采用不同的实现方式，但我选择这种方式是因为我认为它易于理解）：
 
+{% code lineNumbers="true" %}
 ```cpp
 #include "EnvQueryContext_Player.h"
 #include "EnvironmentQuery/EnvQueryTypes.h"
@@ -75,6 +76,7 @@ QueryInstance, FEnvQueryContextData& ContextData) const
   }
 }
 ```
+{% endcode %}
 
 因此，我们能够在C++中检索玩家上下文。
 

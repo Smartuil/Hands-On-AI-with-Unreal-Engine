@@ -6,12 +6,12 @@
 
 首先，创建一个新的蓝图。要继承的类是EQSTestingPawn，如下图所示：
 
-<figure><img src="../../../.gitbook/assets/image (16).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (16) (1).png" alt=""><figcaption></figcaption></figure>
 
 然后，你可以将其重命名为MyEQSTestingPawn。
 
 如果将其拖入地图，从详细信息面板中，可以更改EQS设置，如下图所示：&#x20;
 
-<figure><img src="../../../.gitbook/assets/image (17).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (17) (1).png" alt=""><figcaption></figcaption></figure>
 
 最重要的参数是**查询模板**，您可以在其中指定要可视化的查询。如果需要深入了解该参数，请参阅第12章，AI调试方法 - 导航、EQS和性能分析。

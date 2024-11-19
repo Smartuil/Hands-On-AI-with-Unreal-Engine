@@ -12,6 +12,6 @@ icon: '1'
 * 第二章，[行为树和黑板](xing-wei-shu-he-hei-ban/)
 * 第三章，[导航](dao-hang/)
 * 第四章，[环境查询系统](huan-jing-cha-xun-xi-tong/)
-* 第五章，智能体感知
+* 第五章，[智能体感知](dai-li-ren-yi-shi/)
 * 第六章，扩展行为树
 * 第七章，集群
